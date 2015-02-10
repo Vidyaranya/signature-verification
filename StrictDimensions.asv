@@ -6,8 +6,6 @@ upper_x = 0;
 upper_y = 0;
 i = 1;
 j = 1;
-x
-y
 while(upper_x==0 && i<= x)
     j = 1;
     while(upper_y==0 && j <= y)
@@ -79,18 +77,13 @@ while(left_y==0 && j <= y)
 end
 
 left_y
-imshow(image);
+
 m = upper_x;
 n = left_y;
-x = lower_x - upper_x;
-y = right_y - left_y;
-for i=1:1: x
-    n = left_y;
-    for j=1:1:y
-        image2(i,j) = image(m,n);   
-        n=n+1;
+for i:1:1: lower_x
+    for j:1:1:right_y
+        image2(i,j) = image(m,n);
+        n++;
     end
-    m=m+1;
+    m++;
 end
-figure, imshow(image2);
-[x,y] = size(image2)
